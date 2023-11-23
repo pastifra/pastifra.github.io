@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background-p.jpg') center center fixed;
+            background-size: cover;
+        }
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #top-links {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 100px;
+        }
+
+        #top-links a {
+            color: hsl(0, 0%, 0%);
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 110px;
+        }
+        section {
+            margin: 20px auto;
+            background-color: #f1e3e3;
+            max-width: 90%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden-text {
+            display: none;
+            margin-top: 10px; /* Adjust the spacing */
+            font-size: 3px;
+            color:grey;
+        }
+
+        .show-text .hidden-text {
+            display: block;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: left;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: beige;
+            color: rgb(0, 0, 0);
+            border: 5px solid #2967b8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="top-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About me</a>
+</div>
+<nav></nav>
+
+<section id="paper1">
+    <p>F. Pasti and N. Bellotto (2023)</p>
+    <h2>Evaluation of Computer Vision-Based Person Detection on Low-Cost Embedded Systems</h2>
+    <p>Proceedings of the 18th International Conference on Computer Vision Theory and Applications (VISAPP)</p>
+    
+    <div class="buttons">
+        <button class="button" onclick="toggleHiddenText('cite')">Cite</button>
+        <a href="https://www.dei.unipd.it/~nbellotto/papers/Pasti2023.pdf" class="button" target="_blank">Link</a>
+    </div>
+
+    <div class="hidden-text">
+        <p>@inproceedings{pasti2023evaluation,</p>
+        <p>title={Evaluation of Computer Vision-Based Person Detection on Low-Cost Embedded Systems},</p>
+        <p>author={Pasti, Francesco and Bellotto, Nicola},</p>
+        <p>booktitle = {Proceedings of the 18th International Conference on Computer Vision Theory and Applications (VISAPP)},</p>
+        <p>year = {2023}}</p>
+    </div>
+</section>
+
+<script>
+    function toggleHiddenText(buttonType) {
+        const section = document.getElementById('paper1');
+        const hiddenText = section.querySelector('.hidden-text');
+
+        if (buttonType === 'cite') {
+            hiddenText.classList.toggle('hidden-text');
+        }
+    }
+</script>
+
+</body>
+</html>
